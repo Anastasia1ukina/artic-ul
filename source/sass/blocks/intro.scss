@@ -1,0 +1,91 @@
+.intro {
+  &__wrapper-list {
+    display: flex;
+    align-items: flex-end;
+    gap: size(27px);
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-90deg);
+    flex-direction: column;
+    gap: size(15px);
+  }
+
+  &__item {
+    font-family: $ff-druk;
+    font-size: size(23px);
+    line-height: size(66px);
+    letter-spacing: size(0.456px);
+    text-transform: uppercase;
+    border: size(3px) solid #c31e54;
+    border-radius: size(88px);
+    padding: 0 size(22px);
+    width: size(410px);
+  }
+
+  &__title {
+    font-family: $ff-druk;
+    font-size: size(168px);
+    line-height: size(202px);
+    letter-spacing: size(3.367px);
+    text-transform: uppercase;
+    margin: 0;
+    width: size(1159px);
+
+    &--second {
+      color: $color-old-rose;
+      width: size(1312px);
+    }
+  }
+
+  &__vacancy {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  &__vacancy-item {
+    margin-top: size(-126px);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__number {
+    color: $color-default-white;
+    font-family: $ff-druk;
+    font-size: size(131px);
+    line-height: size(183px);
+    letter-spacing: size(2.623px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    position: absolute;
+    top: size(-137px);
+    left: size(-177px);
+    width: size(484px);
+    height: size(484px);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__descript {
+    font-family: $ff-montserrat;
+    font-size: size(26px);
+    line-height: size(35px);
+    width: size(508px);
+    margin-top: size(60px);
+  }
+}

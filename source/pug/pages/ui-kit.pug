@@ -1,0 +1,242 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+
+block main
+  style.
+    main {
+      margin-top: 100px;
+    }
+
+    main > .container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .components-backwards {
+      color: #ffffff;
+      display: inline-block;
+    }
+
+    .components-backwards span:first-child {
+      position: relative;
+      top: -3px;
+
+      display: inline-block;
+      margin-right: 15px;
+
+      font-size: 16px;
+      line-height: 24px;
+      vertical-align: top;
+
+      transform: scale(2);
+    }
+
+    .components-backwards span:last-child {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .components-backwards + h1 {
+      margin-bottom: 0;
+    }
+
+    .container > section {
+      padding: 70px 0 0 0;
+    }
+
+    section > h2 {
+      margin: 0 0 20px 0;
+      padding: 20px 0;
+      position: relative;
+      color: #ffffff;
+    }
+
+    section > h2::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: #2c39f2;
+      z-index: -1;
+    }
+
+    .header-ui {
+      background-color: #2c39f2;
+      padding: 20px 0;
+      position: fixed;
+      width: 100vw;
+      z-index: 99;
+      box-shadow: 0 0 3px 1px #000000;
+    }
+
+    .header-ui__nav {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 20px 80px;
+    }
+
+    .header-ui__inner-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 30px;
+    }
+
+    .header-ui__inner-link {
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    .header-ui__inner-link:hover,
+    .header-ui__inner-link.is-active {
+      color: #ff1553;
+    }
+
+    .header-ui__inner-link.is-inactive {
+      color: #ffffff;
+      pointer-events: none;
+    }
+
+    .btn {
+      margin: 10px 0;
+    }
+
+    .wrapper {
+      overflow: hidden;
+    }
+
+  header.header-ui
+    nav.header-ui__nav.container
+      a.components-backwards(href="sitemap.html")
+        span &larr;
+        span вернуться на разводящую
+      ul.header-ui__inner-list
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#buttons", data-navigation-link) Buttons
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#title", data-navigation-link) Title
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#text", data-navigation-link) Text
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#tabs-slider", data-navigation-link) Tabs Slider
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#photo", data-navigation-link) Photo
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#user", data-navigation-link) User
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#bubble", data-navigation-link) Bubble
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#notification", data-navigation-link) Notification
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#form-elements", data-navigation-link) Form elements
+
+  main
+    .container
+      h1 UI-kit
+      //- все модалки проекта добавляем сюда, для удобства тестирования
+      section(id="modals")
+        h2 Modals
+        p
+          +btn({text: "modal-feedback"})(data-open-modal="feedback")
+        p
+          +btn({text: "modal-success"})(data-open-modal="success")
+        p Цвет blue по умолчанию, вариант - цвет pink
+        p Направление вращения кнопки налево по умолчанию, вариант - направо right
+        p Модалки изначально без скейла, модификатор не нужен
+        //- p(style="display: flex; align-items: center;")
+          span Для ПП
+          +btn-fun-fact()(data-open-modal="fun-fact-approach")
+          +btn-fun-fact({color: "pink"})(data-open-modal="fun-fact-events")
+          +btn-fun-fact({direction: "right"})(data-open-modal="fun-fact-thread")
+          +btn-fun-fact({color: "pink", direction: "right"})(data-open-modal="fun-fact-engine")
+        p(style = "display: flex; justify-content: flex-end;")
+        code(style="text-align: right;")
+        p(style = "display: flex; justify-content: flex-end;")
+        code(style="text-align: right;")
+        p
+        code
+        p
+        code
+
+      section(id="buttons")
+        h2 Buttons
+        +btn({text: "Текст", href: "#"})
+        p Пример вызова
+        code
+          pre +btn({text: "Текст", href: "#"})
+        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+        p Пример вызова
+        code
+          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+        +btn({text: "Текст"})(disabled)
+        p Пример вызова
+        code
+          pre +btn({text: "Текст"})(disabled)
+        +btn({text: "Текст"})(disabled)
+        p Пример вызова
+        code
+          pre
+        +btn({text: "Текст"}).btn--small
+
+      section(id="title")
+        h2 Title
+        p Доступны модификаторы h1, h2, h3, h4
+        p Тэг по умолчанию - p
+        +title({tag: "h1", text: "Заголовок h1", classMods: ["h1"]})
+        +title({text: "130px", classMods: ["h2"]})
+        p Пример вызова
+        code
+          pre +title({tag: "h1", text: "Заголовок h3", classMods: ["h1"]})
+        +title({text: "Вид h2, 40px", classMods: ["h2"]})
+        p Пример вызова
+        code
+          pre +title({text: "Вид h2, 40px", classMods: ["h2"]})
+        +title({text: "Вид h3, 22px", classMods: ["h3"]})
+        p Пример вызова
+        code
+          pre +title({text: "Вид h3, 22px", classMods: ["h3"]})
+        +title({text: "Вид h4, 16px", classMods: ["h4"]})
+        p Пример вызова
+        code
+          pre +title({text: "Вид h4, 16px", classMods: ["h4"]})
+
+      section(id="text")
+        h2 Text
+        p Стили для p1 - по умолчанию
+        +text({text: "Текст 24px", classMods: ["p1"]})
+        p Пример вызова
+        code
+          pre +text({text: "Текст", classMods: ["p1"]})
+        +text({text: "Текст 20px", classMods: ["p2"]})
+        p Пример вызова
+        code
+          pre +text({text: "Текст", classMods: ["p2"]})
+        +text({text: "Текст 16px", classMods: ["p3"]})
+        p Пример вызова
+        code
+          pre +text({text: "Текст", classMods: ["p3"]})
+        +text({text: "Текст 12px", classMods: ["p4"]})
+        p Пример вызова
+        code
+          pre +text({text: "Текст", classMods: ["p4"]})
+
+      section(id="photo")
+        h2 Photo
+        p Размер определяется контейнером
+        div(style="max-width: 530px;")
+          +photo()
+        p Пример вызова
+        code
+          pre +photo()
+
+  script
+    include ../../js/inline/ui-kit.js

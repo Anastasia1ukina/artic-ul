@@ -1,0 +1,16 @@
+mixin btn(options = {})
+  - const tag = options.href ? "a" : "button";
+  - const href = options.href || false;
+  - const text = options.text || "";
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const scrollTo = options.scrollTo ? options.scrollTo : false
+  - const offset = options.offset ? options.offset : false
+  - const fillerText = options.href && options.text && options.isFilling ? options.text : false
+
+  #{tag}.btn(href=href, target=target, rel=rel, type=type, data-move-to=scrollTo, data-offset=offset)&attributes(attributes)!=text
+    if fillerText
+      span(data-filler)!= fillerText
+    if block
+      block

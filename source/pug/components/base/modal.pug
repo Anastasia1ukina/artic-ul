@@ -1,0 +1,7 @@
+mixin modal(mods)
+  .modal.modal--preload(class=mods)&attributes(attributes)
+    .modal__wrapper
+      .modal__overlay(data-close-modal)
+      .modal__content
+        if block
+          block

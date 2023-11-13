@@ -1,0 +1,7 @@
+mixin title(options = {})
+  - const tag = options.tag || "p";
+  - const classMods = options.classMods ? options.classMods.map((mod) => "title--" + mod) : false;
+  - const text = options.text || "";
+
+  #{tag}.title(class=classMods)&attributes(attributes)
+    | !{text}

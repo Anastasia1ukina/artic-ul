@@ -1,0 +1,14 @@
+mixin photo()
+  .photo&attributes(attributes)
+    ul.photo__list
+      li.photo__item Москва
+      li.photo__item Животные
+      li.photo__item Кошки
+      li.photo__item Не&nbsp;породистые
+    +title({text: "Отдам кота", classMods: ["h2"]}).photo__title
+    .photo__icon
+      +icon("icon-camera", "472", "259")
+    .photo__btn-wrapper
+      +icon("icon-heart", "12", "10")
+      +text({text: "Добавить в&nbsp;избранное", classMods: ["p4"]}).photo__btn-view
+    +text({text: "Интересуется технологиями, любит жать на&nbsp;кнопки.", classMods: ["p2"]}).photo__text

@@ -1,0 +1,8 @@
+mixin text(options = {})
+  - const classMods = options.classMods ? options.classMods.map((mod) => "text--" + mod) : false;
+  - const text = options.text || "";
+
+  p.text(class=classMods)&attributes(attributes)
+    | !{text}
+    if block
+      block
