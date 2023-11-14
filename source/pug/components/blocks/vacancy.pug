@@ -1,10 +1,44 @@
+-
+  const listHeader = ["Требования", "Обязанности", "Стек"]
+
+-
+  const listContent = [
+    "Опыт работы в сфере графики и веба: 6–9 лет и выше",
+    "Понимание проектирования взаимодействия и создания информационной архитектуры проекта",
+    "Умение декомпозировать задачи, организовывать и синхронизировать командную работу с другими дизайнерами",
+    "Ответственность, желание развиваться, обучаемость, перфекционизм, любовь к деталям и минимализму",
+    "Умение при необходимости самостоятельно взаимодействовать в коммуникации с подрядчиком",
+    "Сильное портфолио с кейсами в сфере корпоративного/информационного веба",
+    "Умение быстро подобрать нужные референсы из топовых работ в сфере веба и использовать их в работе",
+  ]
+
 mixin vacancy()
   section.vacancy(id="vacancy")&attributes(attributes)
     .container
       ul.vacancy__list
         li.vacancy__item
           .vacancy__trigger
-            span Middle web designer
+            h2 Middle web designer
+            .vacancy__btn-trigger
+          .vacancy__content-wrapper
+            .vacancy__content
+              ul.vacancy__descript
+                li.vacancy__experience
+                  span.vacancy__number >6
+                  span.vacancy__years лет опыта
+                li.vacancy__description
+                  | Самостоятельный дизайнер с отличной насмотренностью,
+                  | который способен без помощи арт-директора решать как базовые дизайн-задачи
+                  | так и сложные (дизайн лендингов, подач, презентаций и тд.)
+              ul.vacancy__headers
+                each item in listHeader
+                  li= item
+              ul.vacancy__descript-list
+                each item in listContent
+                  li= item
+        li.vacancy__item
+          .vacancy__trigger
+            h2 Системный  аналитик
             .vacancy__btn-trigger
           .vacancy__content-wrapper
             .vacancy__content
@@ -17,22 +51,51 @@ mixin vacancy()
                   | который способен без помощи арт-директора решать как базовые дизайн-задачи
                   | так и сложные (дизайн лендингов, подач, презентаций и тд.)
               ul.vacancy__headers
-                li Требования
-                li Обязанности
-                li Стек
+                each item in listHeader
+                  li= item
               ul.vacancy__descript-list
-        li.vacancy__item
-          .vacancy__trigger
-            span Системный  аналитик
-            .vacancy__btn-trigger
+                each item in listContent
+                  li= item
           .vacancy__content
         li.vacancy__item
           .vacancy__trigger
-            span IT sales manager
+            h2 IT sales manager
             .vacancy__btn-trigger
+          .vacancy__content-wrapper
+            .vacancy__content
+              ul.vacancy__descript
+                li.vacancy__experience
+                  span >6
+                  span лет опыта
+                li.vacancy__description
+                  | Самостоятельный дизайнер с отличной насмотренностью,
+                  | который способен без помощи арт-директора решать как базовые дизайн-задачи
+                  | так и сложные (дизайн лендингов, подач, презентаций и тд.)
+              ul.vacancy__headers
+                each item in listHeader
+                  li= item
+              ul.vacancy__descript-list
+                each item in listContent
+                  li= item
           .vacancy__content
         li.vacancy__item
           .vacancy__trigger
-            span Head of marketing & PR
+            h2.vacancy__title-end Head of marketing & PR
             .vacancy__btn-trigger
+          .vacancy__content-wrapper
+            .vacancy__content
+              ul.vacancy__descript
+                li.vacancy__experience
+                  span >6
+                  span лет опыта
+                li.vacancy__description
+                  | Самостоятельный дизайнер с отличной насмотренностью,
+                  | который способен без помощи арт-директора решать как базовые дизайн-задачи
+                  | так и сложные (дизайн лендингов, подач, презентаций и тд.)
+              ul.vacancy__headers
+                each item in listHeader
+                  li= item
+              ul.vacancy__descript-list
+                each item in listContent
+                  li= item
           .vacancy__content

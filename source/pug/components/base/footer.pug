@@ -1,4 +1,13 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods, id="final", data-header-color="light")
-    section.footer__container&attributes(attributes)
-      .footer__intro-wrapper
+  footer.footer(class=footerMods, id="footer")
+    .container
+      h2.visually-hidden футер
+      .footer__wrapper
+        ul.footer__list
+          li.footer__item просто вы
+          li.footer__item Я точно нужен вам,
+          li.footer__item пока Не знаете
+        h3.footer__description
+          | Если вы хотите стать частью нашей команды,
+          | но не нашли подходящую вакансию в списке выше,
+          a(href="#")  то напишите нам

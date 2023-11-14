@@ -1,0 +1,82 @@
+.vacancy {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__trigger {
+    border-top: size(3px) solid $color-default-white;
+  }
+
+  &__trigger h2 {
+    font-family: $ff-druk;
+    font-size: size(69px);
+    line-height: size(202px);
+    letter-spacing: size(1.387px);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__number {
+    font-family: $ff-montserrat;
+    font-size: size(123px);
+    line-height: normal;
+  }
+
+  &__years {
+    font-family: $ff-montserrat;
+    font-size: size(23px);
+    line-height: size(32px);
+  }
+
+  &__descript {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__description {
+    font-family: $ff-montserrat;
+    font-size: size(30px);
+    line-height: size(39px);
+  }
+
+  &__headers {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__headers li {
+    font-family: $ff-druk;
+    font-size: size(22px);
+    line-height: size(55px);
+    letter-spacing: size(0.44px);
+    text-transform: uppercase;
+  }
+
+  &__descript-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__descript-list li {
+    font-family: $ff-montserrat;
+    font-size: size(22px);
+    line-height: size(32px);
+    opacity: 0.8;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__title-end {
+    border-bottom: size(3px) solid $color-default-white;
+  }
+}

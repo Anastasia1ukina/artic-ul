@@ -1,0 +1,19 @@
+.footer {
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    font-family: $ff-druk;
+    font-size: size(23px);
+    line-height: size(66px);
+    letter-spacing: size(0.456px);
+    text-transform: uppercase;
+    border: size(3px) solid #c31e54;
+    border-radius: size(88px);
+    padding: 0 size(22px);
+    width: size(420px);
+  }
+}
