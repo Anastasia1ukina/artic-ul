@@ -98,55 +98,55 @@
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-767-L {
-  @media (max-width: ($vp-768 - 1px)) and (orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
-}
-
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
+// @mixin vp-1919 {
+//   @media (max-width: ($vp-1920 - 1px)) {
 //     @content;
 //   }
 // }
+
+// @mixin vp-1439 {
+//   @media (max-width: ($vp-1440 - 1px)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1279 {
+//   @media (max-width: ($vp-1280 - 1px)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1023 {
+//   @media (max-width: ($vp-1024 - 1px)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-767 {
+//   @media (max-width: ($vp-768 - 1px)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-767-L {
+//   @media (max-width: ($vp-768 - 1px)) and (orientation: landscape) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-374 {
+//   @media (max-width: ($vp-375 - 1px)) {
+//     @content;
+//   }
+// }
+
+// Mobile first
+
+@mixin vp-320 {
+  @media (min-width: $vp-320) {
+    @content;
+  }
+}
 
 @mixin vp-768 {
   @media (min-width: $vp-768) {
@@ -154,11 +154,11 @@
   }
 }
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
 
 // @mixin vp-1280 {
 //   @media (min-width: $vp-1280) {
@@ -172,11 +172,11 @@
 //   }
 // }
 
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
+@mixin vp-1920 {
+  @media (min-width: $vp-1920) {
+    @content;
+  }
+}
 
 // ---------------------------------
 
